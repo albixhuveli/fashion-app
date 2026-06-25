@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "X60x4BXta+EI7L8T9enNOMsCv1D9NPHkVgI2GNirqss=",
-  "Source": "FashionApp.API",
-  "BasePath": "_content/FashionApp.API",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"9MUkj7xiTohr83PRsnDNf+2BWOoFIRRzdjSDLoeD5Uk=","Source":"FashionApp.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
