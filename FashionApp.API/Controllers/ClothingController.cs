@@ -24,4 +24,12 @@ public class ClothingController : ControllerBase
     {
         return Ok(clothingItems);
     }
+
+    [HttpPost]
+    public ActionResult<ClothingItem> AddClothing(ClothingItem clothingItem)
+    {
+        clothingItem.Id = clothingItems.Count + 1;
+        clothingItems.Add(clothingItem);
+        return Ok(clothingItem);
+    }
 }
