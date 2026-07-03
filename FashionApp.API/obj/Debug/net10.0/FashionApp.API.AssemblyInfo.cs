@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FashionApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1addc421edbd3e21681c2bb4ba2aa63fe0b3463d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+989acb06eab0000c293901d3a3519294d6dce269")]
 [assembly: System.Reflection.AssemblyProductAttribute("FashionApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FashionApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,9 +1,17 @@
+using FashionApp.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<FashionDbContext>(options =>
+    options.UseSqlServer(
+        "Server=DESKTOP-LBMPM6F\\SQLEXPRESS;Database=FashionAppDb;Trusted_Connection=True;TrustServerCertificate=True"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
