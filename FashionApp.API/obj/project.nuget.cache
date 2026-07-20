@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u/XKAyg1kQM=",
+  "dgSpecHash": "G3cxm2ZDUgY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\X\\Desktop\\projects\\fashionapp\\fashionapp.api\\FashionApp.API.csproj",
+  "projectFilePath": "C:\\Users\\X\\Desktop\\projects\\fashionapp\\FashionApp.API\\FashionApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\X\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\X\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

@@ -1,35 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
 using FashionApp.API.Models;
+using FashionApp.API.Data;
 
 namespace FashionApp.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ClothingController : ControllerBase
+{   
+    private readonly FashionDbContext _context;
+    public ClothingController(FashionDbContext context)
 {
-    private static List<ClothingItem> clothingItems = new()
-    {
-        new ClothingItem
-        {
-            Id = 1,
-            Name = "Black Hoodie",
-            Category = "Top",
-            Color = "Black",
-            ImageUrl = ""
-        }
-    };
+    _context = context;
+}
 
     [HttpGet]
     public ActionResult<List<ClothingItem>> GetAll()
     {
-        return Ok(clothingItems);
+        return Ok(_context.ClothingItems.ToList());
     }
 
     [HttpPost]
     public ActionResult<ClothingItem> AddClothing(ClothingItem clothingItem)
     {
-        clothingItem.Id = clothingItems.Count + 1;
-        clothingItems.Add(clothingItem);
+        _context.ClothingItems.Add(clothingItem);
+        _context.SaveChanges();
         return Ok(clothingItem);
     }
 }
