@@ -13,6 +13,16 @@ public class ClothingController : ControllerBase
 {
     _context = context;
 }
+    [HttpGet("{id}")]
+    public ActionResult<ClothingItem> GetById(int id)
+    {
+        var clothingItem = _context.ClothingItems.Find(id);
+        if (clothingItem == null)
+        {
+            return NotFound();
+        }
+        return Ok(clothingItem);
+    }
 
     [HttpGet]
     public ActionResult<List<ClothingItem>> GetAll()
