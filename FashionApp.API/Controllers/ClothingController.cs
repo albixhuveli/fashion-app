@@ -37,4 +37,34 @@ public class ClothingController : ControllerBase
         _context.SaveChanges();
         return Ok(clothingItem);
     }
+
+    [HttpPut("{id}")]
+    public ActionResult<ClothingItem> updateClothing(int id, ClothingItem updatedItem)
+    {
+        var clothingItem = _context.ClothingItems.Find(id);
+        if (clothingItem == null)
+        {
+            return NotFound();
+        }
+        clothingItem.Name = updatedItem.Name;
+        clothingItem.Category = updatedItem.Category;
+        clothingItem.Color = updatedItem.Color;
+        clothingItem.ImageUrl = updatedItem.ImageUrl;
+
+        _context.SaveChanges();
+        return Ok(clothingItem);
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult DeleteClothing(int id)
+    {
+        var clothingItem = _context.ClothingItems.Find(id);
+        if (clothingItem == null)
+        {
+            return NotFound();
+        }
+        _context.ClothingItems.Remove(clothingItem);
+        _context.SaveChanges();
+        return NoContent();
+    }
 }
